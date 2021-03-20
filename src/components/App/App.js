@@ -1,8 +1,9 @@
 import React from 'react';
 import './App.css';
 import Header from '../Header/Header';
-import Button from '../Button/Button';
+import Button from '../UI/Button/Button';
 import Post from '../Post/Post';
+import Modal from '../UI/Modal/Modal';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Header />
       <Button>NEW</Button>
       <Post />
+      <Modal />
     </div>
   );
 }

@@ -1,11 +1,12 @@
 .addButton {
-  margin: 10px auto;
+  margin: 2vmax 2vmax;
   background-color: white;
   color: #14c91a;
   border: 1.5px solid #14c91a;
-  padding: 5px 15px;
+  padding: 1vmax 1vmax;
   border-radius: 10%;
   cursor: pointer;
+  font-size: 1.3vmax;
 }
 
 .addButton:active {
