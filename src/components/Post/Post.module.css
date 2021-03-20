@@ -1,0 +1,47 @@
+/* POST */
+
+.post {
+  max-width: 70%;
+  margin: 0 auto 50px;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* POST HEADER */
+
+.postHeader{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1.2px solid black;
+}
+
+.postName {
+  font-size: 20px;
+}
+
+/* POST IMG */
+
+.postImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* POST BUTTON*/
+
+.postButton {
+  color: rgb(255, 0, 0);
+  cursor: pointer;
+  border: none;
+  background-color: #fff;
+  font-size: 15px;
+}
+
+.postButton:hover {
+  transform: scale(1.2);
+}
+
+.postButton:active {
+  color: rgb(122, 0, 0);
+}
