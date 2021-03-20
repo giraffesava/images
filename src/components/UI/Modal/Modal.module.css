@@ -5,12 +5,12 @@
   z-index: 500;
   background-color: white;
   width: 30%;
-  height: 28vmax;
+  height: 26vmax;
   border: 1px solid #ccc;
   box-shadow: 1px 1px 1px black;
   padding: 3vmax;
   left: 35%;
-  top: 25%;
+  top: 24%;
   box-sizing: border-box;
   transition: all 0.3s ease-out;
 }
@@ -30,13 +30,13 @@
   font-size: 2.5vmax;
   text-align: center;
   width: 100%;
-  margin: 1.6vmax 0;
+  margin: 1vmax 0;
 }
 
 /* INPUT */
 
 .modalInput {
-  margin-bottom: 1.5vmax;
+  margin-bottom: 1vmax;
   max-width: 400px;
   font-size: 1.8vmax;
 }
@@ -47,11 +47,4 @@
 .buttonBlock {
   display: flex;
   justify-content: space-around
-}
-
-
-.modalInput {
-  margin-bottom: 1.5vmax;
-  max-width: 400px;
-  font-size: 1.8vmax;
 }

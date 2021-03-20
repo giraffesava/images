@@ -1,8 +1,8 @@
 /* POST */
 
 .post {
-  max-width: 70%;
-  margin: 0 auto 50px;
+  max-width: 70vmax;
+  margin: 0 auto 3vmax;
   box-sizing: border-box;
   padding: 0;
 }
@@ -12,12 +12,12 @@
 .postHeader{
   display: flex;
   justify-content: space-between;
-  padding: 10px;
+  padding: 2vmax;
   border: 1.2px solid black;
 }
 
 .postName {
-  font-size: 20px;
+  font-size: 2.2vmax;
 }
 
 /* POST IMG */
@@ -35,7 +35,7 @@
   cursor: pointer;
   border: none;
   background-color: #fff;
-  font-size: 15px;
+  font-size: 2vmax;
 }
 
 .postButton:hover {
