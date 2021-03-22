@@ -28,7 +28,7 @@ function Modal() {
             <input className={classes.modalInput} type="text" placeholder="Title" maxLength="30" />
             <input className={classes.modalInput} type="text" placeholder="URL" />
             <div className={classes.buttonBlock}>
-              <Button toCloseModal={turnOffModalHandler}>CLOSE</Button>
+              <Button closingModal toCloseModal={turnOffModalHandler}>CLOSE</Button>
               <Button toAddPost={addPostHandler}>ADD</Button>
             </div>
           </div>
