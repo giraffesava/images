@@ -5,7 +5,7 @@
   background-color: white;
   color: #14c91a;
   border: 1.5px solid #14c91a;
-  padding: 1vmax 1vmax;
+  padding: 1vmax 1.8vmax;
   border-radius: 10%;
   cursor: pointer;
   font-size: 1.3vmax;
@@ -30,6 +30,7 @@
   border: none;
   background-color: #fff;
   font-size: 1.5vmax;
+  padding: 0
 }
 
 .postButtonDelete:hover {
@@ -47,5 +48,6 @@
 
 .moduleButtonClose {
   color: #000000;
+  padding: 1vmax 1vmax;
   border: 1.5px solid #000000;
 }
