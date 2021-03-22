@@ -28,20 +28,3 @@
   object-fit: cover;
 }
 
-/* POST BUTTON*/
-
-.postButton {
-  color: rgb(255, 0, 0);
-  cursor: pointer;
-  border: none;
-  background-color: #fff;
-  font-size: 2vmax;
-}
-
-.postButton:hover {
-  transform: scale(1.2);
-}
-
-.postButton:active {
-  color: rgb(122, 0, 0);
-}

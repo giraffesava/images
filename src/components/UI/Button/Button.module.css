@@ -18,3 +18,22 @@
 .addButton:hover {
     transform: scale(1.2);
   }
+
+
+/* POST BUTTON*/
+
+.postButtonDelete {
+  color: rgb(255, 0, 0);
+  cursor: pointer;
+  border: none;
+  background-color: #fff;
+  font-size: 2vmax;
+}
+
+.postButtonDelete:hover {
+  transform: scale(1.2);
+}
+
+.postButtonDelete:active {
+  color: rgb(122, 0, 0);
+}  

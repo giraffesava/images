@@ -1,15 +1,25 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import classes from './Modal.module.css';
 import Button from '../Button/Button';
 import Backdrop from '../Backdrop/Backdrop';
+import { turnOffModal } from '../../../store/actions/index';
 
 function Modal() {
   const modalIsOn = useSelector((state) => state.modalReducer.modalIsOn);
+  const dispatch = useDispatch();
   console.log(modalIsOn);
+
+  const turnOffModalHandler = () => {
+    dispatch(turnOffModal());
+  };
+
+  const addPostHandler = () => {
+    dispatch(turnOffModal());
+  };
   return (
     <div>
-      {modalIsOn && (
+      {!!modalIsOn && (
       <>
         <Backdrop />
         <div className={classes.Modal}>
@@ -18,8 +28,8 @@ function Modal() {
             <input className={classes.modalInput} type="text" placeholder="Title" maxLength="30" />
             <input className={classes.modalInput} type="text" placeholder="URL" />
             <div className={classes.buttonBlock}>
-              <Button>CLOSE</Button>
-              <Button>ADD</Button>
+              <Button toCloseModal={turnOffModalHandler}>CLOSE</Button>
+              <Button toAddPost={addPostHandler}>ADD</Button>
             </div>
           </div>
         </div>

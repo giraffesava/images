@@ -5,16 +5,19 @@ import Header from '../Header/Header';
 import Button from '../UI/Button/Button';
 import Post from '../Post/Post';
 import Modal from '../UI/Modal/Modal';
-import { turnOffModal, turnOnModal } from '../../store/actions/index';
+import { turnOnModal } from '../../store/actions/index';
 
 function App() {
   const dispatch = useDispatch();
 
+  const turnOnModalHandler = () => {
+    dispatch(turnOnModal());
+  };
+
   return (
     <div className="App">
       <Header />
-      <Button onClicked={() => dispatch(turnOffModal())}>NEW</Button>
-      <Button onClicked={() => dispatch(turnOnModal())}>NEW</Button>
+      <Button whatToDo={turnOnModalHandler}>NEW</Button>
       <Post />
       <Modal />
     </div>
