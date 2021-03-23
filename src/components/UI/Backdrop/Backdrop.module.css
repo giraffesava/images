@@ -7,3 +7,9 @@
   top: 0;
   background-color: rgb(230, 230, 230);
 }
+
+@media (max-width: 500px){
+  .Backdrop{
+    background-color: #fff;
+  }
+}

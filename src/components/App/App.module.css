@@ -75,3 +75,11 @@
   padding: 1vmax 1vmax;
   border: 1.5px solid #000000;
 }
+
+
+@media (max-width: 500px){
+  .addButton {
+    width: 70%;
+    margin: 2vmax 0;
+  }
+}

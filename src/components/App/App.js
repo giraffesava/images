@@ -16,7 +16,7 @@ function App() {
   /* POST */
 
   const [postData, setPostData] = useState([
-    { title: 'Moutains', url: 'https://www.sunhome.ru/i/wallpapers/87/zolotoe-nebo.xxl.jpg', id: 234424 },
+    { title: 'Mountains', url: 'https://www.sunhome.ru/i/wallpapers/87/zolotoe-nebo.xxl.jpg', id: 234424 },
     { title: 'Italy', url: 'https://prospedbg.com/wp-content/uploads/2018/02/italy_places.jpg', id: 764588 }]);
 
   const deletePost = (id) => {
@@ -38,8 +38,6 @@ function App() {
       deletePost={deletePost}
     />
   ));
-
-  /* VALIDATION */
 
   /* MODAL */
   const turnOffModalHandler = () => {
