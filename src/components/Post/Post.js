@@ -11,7 +11,16 @@ function Post({
         <h1 className={classes.postName}>{title}</h1>
         <button type="button" className={classes.postButtonDelete} onClick={() => deletePost(id)}>delete</button>
       </div>
-      <img className={classes.postImg} src={url} alt={title} onError={(e) => { e.target.onerror = null; e.target.src = 'https://res.cloudinary.com/teepublic/image/private/s--NkspL6KL--/t_Preview/b_rgb:ffffff,c_lpad,f_jpg,h_630,q_90,w_1200/v1527296869/production/designs/2723988_2.jpg'; }} />
+      <img
+        className={classes.postImg}
+        src={url}
+        alt={title}
+        onError={(e) => {
+          e.target.onerror = null;
+          e.target.src = 'https://cdn.dribbble.com/users/774806/screenshots/3823110/something-went-wrong.gif';
+          e.target.value = 'error';
+        }}
+      />
     </div>
   );
 }

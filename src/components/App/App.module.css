@@ -59,7 +59,13 @@
     transform: scale(1.2);
   }
 
-
+.addButton:disabled,
+  button[disabled]{
+    background-color: #cccccc;
+    color: #666666;
+    cursor: not-allowed;
+    border: 1.5px solid #cccccc;
+  }
 
 
 /* MODULE BUTTON CLOSE */

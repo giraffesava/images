@@ -10,10 +10,8 @@ import { turnOffModal, turnOnModal } from '../../store/actions/index';
 function App() {
   const dispatch = useDispatch();
   const modalIsOn = useSelector((state) => state.modalReducer.modalIsOn);
-
-  const turnOnModalHandler = () => {
-    dispatch(turnOnModal());
-  };
+  const [url, setUrl] = useState('');
+  const [title, setTitle] = useState('');
 
   /* POST */
 
@@ -23,6 +21,12 @@ function App() {
 
   const deletePost = (id) => {
     setPostData(postData.filter((post) => post.id !== id));
+  };
+
+  const turnOnModalHandler = () => {
+    dispatch(turnOnModal());
+    setUrl('');
+    setTitle('');
   };
 
   const posts = postData.map((item) => (
@@ -38,9 +42,6 @@ function App() {
   /* VALIDATION */
 
   /* MODAL */
-
-  const [url, setUrl] = useState('');
-  const [title, setTitle] = useState('');
   const turnOffModalHandler = () => {
     dispatch(turnOffModal());
   };
@@ -53,11 +54,6 @@ function App() {
     dispatch(turnOffModal());
   };
 
-  // const validateUrl = (value) => {
-  //   value.trim();
-  //   console.log(value.length);
-  // };
-
   const modal = !!modalIsOn && (
     <>
       <Backdrop />
@@ -67,20 +63,20 @@ function App() {
             <h1 className={classes.modalText}>New image</h1>
             <input
               className={classes.modalInput}
-              defaultValue={title}
+              value={title}
               type="text"
               placeholder="Title"
               maxLength="30"
               minLength="3"
-              onInput={(e) => setTitle(e.target.value)}
+              onInput={(e) => setTitle((e.target.value).trimLeft())}
             />
             <input
               className={classes.modalInput}
-              defaultValue={url}
+              value={url}
               type="text"
               minLength="10"
               placeholder="URL"
-              onInput={(e) => setUrl(e.target.value)}
+              onInput={(e) => setUrl((e.target.value).trimLeft())}
             />
             <div className={classes.buttonBlock}>
               <button
@@ -91,6 +87,7 @@ function App() {
                 CLOSE
               </button>
               <button
+                disabled={!((url && title))}
                 className={classes.addButton}
                 type="button"
                 onClick={() => addPostHandler()}
