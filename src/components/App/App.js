@@ -22,12 +22,18 @@ function App() {
     { title: 'Moutains', url: 'https://www.sunhome.ru/i/wallpapers/87/zolotoe-nebo.xxl.jpg', id: 23442412 },
     { title: 'Italy', url: 'https://prospedbg.com/wp-content/uploads/2018/02/italy_places.jpg', id: 76458843 }]);
 
+  const toDeletePost = (id) => {
+    console.log(id);
+    setPostData(postData.filter((post) => post.id !== id));
+  };
+
   const posts = postData.map((item) => (
     <Post
       url={item.url}
       key={item.id}
       title={item.title}
       id={item.id}
+      toDelete={toDeletePost}
     />
   ));
 
