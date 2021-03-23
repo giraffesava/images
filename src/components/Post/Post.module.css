@@ -26,3 +26,24 @@
   object-fit: cover;
 }
 
+/* POST BUTTON DELETE*/
+
+.postButtonDelete {
+  color: rgb(255, 0, 0);
+  cursor: pointer;
+  border: none;
+  background-color: #fff;
+  font-size: 1.5vmax;
+  padding: 0
+}
+
+.postButtonDelete:hover {
+  transform: scale(1.2);
+  border: none;
+}
+
+.postButtonDelete:active {
+  color: rgb(122, 0, 0);
+  border: none;
+}  
+

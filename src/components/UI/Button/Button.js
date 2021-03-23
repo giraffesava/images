@@ -4,13 +4,12 @@ import PropTypes from 'prop-types';
 import classes from './Button.module.css';
 
 function Button({
-  children, whatToDo, deletingPost, closingModal, id,
+  children, whatToDo, deletingPost, closingModal,
 }) {
   return (
     <button
-      key={id}
       type="button"
-      onClick={() => whatToDo(id)}
+      onClick={whatToDo}
       className={[classes.addButton,
         deletingPost ? classes.postButtonDelete : null,
         closingModal ? classes.moduleButtonClose : null].join(' ')}
@@ -24,7 +23,6 @@ Button.defaultProps = {
   whatToDo: undefined,
   deletingPost: false,
   closingModal: false,
-  id: undefined,
 };
 
 Button.propTypes = {
@@ -32,7 +30,6 @@ Button.propTypes = {
   whatToDo: PropTypes.func,
   deletingPost: PropTypes.bool,
   closingModal: PropTypes.bool,
-  id: PropTypes.number,
 };
 
 export default Button;

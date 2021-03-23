@@ -12,7 +12,7 @@
   left: 35%;
   top: 24%;
   box-sizing: border-box;
-  transition: all 0.3s ease-out;
+  transition: top 1s ease-out 5.5s;
 }
 
 /*-----------------INSIDE OF MODAL---------------------*/
