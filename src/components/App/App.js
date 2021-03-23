@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import classes from './App.module.css';
 import Header from '../Header/Header';
-import Button from '../UI/Button/Button';
 import Post from '../Post/Post';
 import Modal from '../UI/Modal/Modal';
 import Backdrop from '../UI/Backdrop/Backdrop';
@@ -19,11 +18,10 @@ function App() {
   /* POST */
 
   const [postData, setPostData] = useState([
-    { title: 'Moutains', url: 'https://www.sunhome.ru/i/wallpapers/87/zolotoe-nebo.xxl.jpg', id: 23442412 },
-    { title: 'Italy', url: 'https://prospedbg.com/wp-content/uploads/2018/02/italy_places.jpg', id: 76458843 }]);
+    { title: 'Moutains', url: 'https://www.sunhome.ru/i/wallpapers/87/zolotoe-nebo.xxl.jpg', id: 234424 },
+    { title: 'Italy', url: 'https://prospedbg.com/wp-content/uploads/2018/02/italy_places.jpg', id: 764588 }]);
 
   const deletePost = (id) => {
-    console.log(id);
     setPostData(postData.filter((post) => post.id !== id));
   };
 
@@ -37,6 +35,8 @@ function App() {
     />
   ));
 
+  /* VALIDATION */
+
   /* MODAL */
 
   const [url, setUrl] = useState('');
@@ -46,12 +46,18 @@ function App() {
   };
 
   const addPostHandler = () => {
-    const id = Math.round(Math.random() * 100000000);
+    const id = Math.round(Math.random() * 1000000);
     setPostData([{ title, url, id }, ...postData]);
     setUrl('');
     setTitle('');
     dispatch(turnOffModal());
   };
+
+  // const validateUrl = (value) => {
+  //   value.trim();
+  //   console.log(value.length);
+  // };
+
   const modal = !!modalIsOn && (
     <>
       <Backdrop />
@@ -65,18 +71,32 @@ function App() {
               type="text"
               placeholder="Title"
               maxLength="30"
+              minLength="3"
               onInput={(e) => setTitle(e.target.value)}
             />
             <input
               className={classes.modalInput}
               defaultValue={url}
               type="text"
+              minLength="10"
               placeholder="URL"
               onInput={(e) => setUrl(e.target.value)}
             />
             <div className={classes.buttonBlock}>
-              <Button closingModal whatToDo={turnOffModalHandler}>CLOSE</Button>
-              <Button whatToDo={addPostHandler}>ADD</Button>
+              <button
+                className={[classes.addButton, classes.moduleButtonClose].join(' ')}
+                type="button"
+                onClick={() => turnOffModalHandler()}
+              >
+                CLOSE
+              </button>
+              <button
+                className={classes.addButton}
+                type="button"
+                onClick={() => addPostHandler()}
+              >
+                ADD
+              </button>
             </div>
           </div>
         </div>
@@ -86,7 +106,7 @@ function App() {
   return (
     <div className={classes.App}>
       <Header />
-      <Button whatToDo={turnOnModalHandler}>NEW</Button>
+      <button className={classes.addButton} type="button" onClick={turnOnModalHandler}>NEW</button>
       {posts}
       {modal}
     </div>

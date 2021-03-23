@@ -35,3 +35,37 @@
   display: flex;
   justify-content: space-around
 }
+
+/* ADD BUTTON */
+
+.addButton {
+  margin: 2vmax 2vmax;
+  background-color: white;
+  color: #14c91a;
+  border: 1.5px solid #14c91a;
+  padding: 1vmax 1.8vmax;
+  border-radius: 10%;
+  cursor: pointer;
+  font-size: 1.3vmax;
+}
+
+.addButton:active {
+  color: #ffffff;
+  border: 1.5px solid #0c790f;
+  background-color: rgb(196, 196, 196);
+}
+
+.addButton:hover {
+    transform: scale(1.2);
+  }
+
+
+
+
+/* MODULE BUTTON CLOSE */
+
+.moduleButtonClose {
+  color: #000000;
+  padding: 1vmax 1vmax;
+  border: 1.5px solid #000000;
+}
