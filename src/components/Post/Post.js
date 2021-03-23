@@ -1,17 +1,28 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import classes from './Post.module.css';
 import Button from '../UI/Button/Button';
 
-function Post() {
+function Post({ url, title, id }) {
+  // const deletePost = id => {
+
+  // }
+
   return (
-    <div className={classes.post}>
+    <div className={classes.post} key={id}>
       <div className={classes.postHeader}>
-        <h1 className={classes.postName}>Mountains</h1>
+        <h1 className={classes.postName}>{title}</h1>
         <Button deletingPost>delete</Button>
       </div>
-      <img className={classes.postImg} src="https://get.wallhere.com/photo/city-cityscape-night-skyline-skyscraper-evening-bridge-dusk-metropolis-downtown-landmark-metropolitan-area-human-settlement-aerial-photography-90813.jpg" alt="city" />
+      <img className={classes.postImg} src={url} alt={title} />
     </div>
   );
 }
+
+Post.propTypes = {
+  url: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
+};
 
 export default Post;
