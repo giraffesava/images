@@ -78,8 +78,9 @@
 
 
 @media (max-width: 500px){
-  .addButton {
-    width: 70%;
+  .addButton, .addButton:hover {
+    width: 50%;
     margin: 2vmax 0;
+    transform: scale(1);
   }
 }

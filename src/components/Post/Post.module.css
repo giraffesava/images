@@ -1,8 +1,8 @@
 /* POST */
 .post {
-  max-width: 55vmax;
+  max-width: 50%;
   margin: 0 auto 7vmax;
-  box-sizing: border-box;
+  border: 1.5px solid black;
 }
 
 /* POST HEADER */
@@ -10,10 +10,8 @@
 .postHeader {
   display: flex;
   justify-content: space-between;
-  padding: 0.6vmax;
-  border-left: 2px solid black;
-  border-top: 2px solid black;
-  border-right: 2px solid black;
+  padding: 1%;
+  border-bottom: 1.5px solid black;
 }
 
 .postName {
@@ -23,14 +21,33 @@
 /* POST IMG */
 
 .postImg {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  box-sizing: border-box;
-  border: 2px solid black;
+  max-width: 100%; 
+  height: auto; 
+  display: block;
+  margin: 0 auto;
 }
 
 /* POST BUTTON DELETE*/
+
+.deletePostOverlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(8, 6, 6, 0.6);
+  display: flex;
+  justify-content: center;
+}
+.deletePostOverlay p {
+  font-size: 1.7em;
+  color: red;
+}
+
+.deletePost{
+  position: relative;
+  max-width: 55vmax;
+  max-height: 100vmax;
+}
+
 
 .postButtonDelete {
   color: rgb(255, 0, 0);
@@ -38,7 +55,6 @@
   border: none;
   background-color: #fff;
   font-size: 1.5vmax;
-  padding: 0;
 }
 
 .postButtonDelete:hover {

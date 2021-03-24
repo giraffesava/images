@@ -17,7 +17,8 @@ function App() {
 
   const [postData, setPostData] = useState([
     { title: 'Mountains', url: 'https://www.sunhome.ru/i/wallpapers/87/zolotoe-nebo.xxl.jpg', id: 234424 },
-    { title: 'Italy', url: 'https://prospedbg.com/wp-content/uploads/2018/02/italy_places.jpg', id: 764588 }]);
+    { title: 'Italy', url: 'https://prospedbg.com/wp-content/uploads/2018/02/italy_places.jpg', id: 764588 },
+    { title: 'Italy', url: 'https://i.pinimg.com/736x/7b/5d/e2/7b5de2ef9df8a5010b428beaf1d7fe3e.jpg', id: 125678 }]);
 
   const deletePost = (id) => {
     setPostData(postData.filter((post) => post.id !== id));
