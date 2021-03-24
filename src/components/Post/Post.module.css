@@ -38,8 +38,9 @@
   justify-content: center;
 }
 .deletePostOverlay p {
-  font-size: 1.7em;
+  font-size: 2em;
   color: red;
+  padding-bottom: 5%;
 }
 
 .deletePost{

@@ -1,8 +1,8 @@
   /* MODAL */
   .Modal {
   position: absolute;
-  z-index: 500;
-  background-color: white;
+  z-index: 200;
+  background-color: rgb(255, 255, 255);
   width: 30%;
   height: 26vmax;
   border: 1px solid #ccc;
@@ -12,6 +12,7 @@
   top: 24%;
   box-sizing: border-box;
 }
+
 
 /*-----------------INSIDE OF MODAL---------------------*/
 
@@ -47,20 +48,51 @@
   justify-content: space-around
 }
 
+/* ADD BUTTON */
+
+.addButton {
+  margin: 2vmax 2vmax;
+  background-color: white;
+  color: #14c91a;
+  border: 1.5px solid #14c91a;
+  padding: 1vmax 1.8vmax;
+  border-radius: 10%;
+  cursor: pointer;
+  font-size: 1.3vmax;
+}
+
+.addButton:active {
+  color: #ffffff;
+  border: 1.5px solid #0c790f;
+  background-color: rgb(196, 196, 196);
+}
+
+.addButton:hover {
+    transform: scale(1.2);
+  }
+
+.addButton:disabled,
+  button[disabled]{
+    background-color: #cccccc;
+    color: #666666;
+    cursor: not-allowed;
+    border: 1.5px solid #cccccc;
+  }
+
+
+/* MODULE BUTTON CLOSE */
+
+.moduleButtonClose {
+  color: #000000;
+  padding: 1vmax 1vmax;
+  border: 1.5px solid #000000;
+}
+
 
 @media (max-width: 500px){
-  .Modal {
-    z-index: 500;
-    background-color: white;
-    border: none;
-    box-shadow: none;
-    top: 30%;
-    left:auto;
-    margin: 0 auto;
-    width: 80%;
-    vertical-align: middle;
-  }
-  .buttonBlock {
-    flex-direction: row;
+  .addButton, .addButton:hover {
+    width: 50%;
+    margin: 2vmax 0;
+    transform: scale(1);
   }
 }

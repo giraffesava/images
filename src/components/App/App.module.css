@@ -2,42 +2,6 @@
   text-align: center;
 }
 
-/*-----------------INSIDE OF MODAL---------------------*/
-
-/*CONTAINER*/
-
-.container {
-  display: flex;
-  flex-direction:column;
-}
-
-/* TEXT */
-
-.modalText {
-  font-size: 2.5vmax;
-  text-align: center;
-  width: 100%;
-  margin: 1vmax 0;
-}
-
-/* INPUT */
-
-.modalInput {
-  margin-bottom: 1vmax;
-  max-width: 400px;
-  font-size: 1.8vmax;
-}
-
-
-/* BUTTONS */
-
-.buttonBlock {
-  display: flex;
-  justify-content: space-around
-}
-
-/* ADD BUTTON */
-
 .addButton {
   margin: 2vmax 2vmax;
   background-color: white;
@@ -59,28 +23,10 @@
     transform: scale(1.2);
   }
 
-.addButton:disabled,
-  button[disabled]{
-    background-color: #cccccc;
-    color: #666666;
-    cursor: not-allowed;
-    border: 1.5px solid #cccccc;
-  }
-
-
-/* MODULE BUTTON CLOSE */
-
-.moduleButtonClose {
-  color: #000000;
-  padding: 1vmax 1vmax;
-  border: 1.5px solid #000000;
-}
-
-
 @media (max-width: 500px){
   .addButton, .addButton:hover {
     width: 50%;
     margin: 2vmax 0;
     transform: scale(1);
   }
-}
+}  

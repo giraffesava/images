@@ -1,20 +1,22 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
 import classes from './Backdrop.module.css';
-import { turnOffModal } from '../../../store/actions/index';
 
-function Backdrop() {
-  const dispatch = useDispatch();
+function Backdrop({ turnOffModalHandler }) {
   return (
     <div
       role="button"
       aria-label="Mute volume"
       tabIndex={0}
       className={classes.Backdrop}
-      onClick={() => dispatch(turnOffModal())}
-      onKeyDown={() => dispatch(turnOffModal())}
+      onClick={() => turnOffModalHandler()}
+      onKeyDown={() => turnOffModalHandler()}
     />
   );
 }
+
+Backdrop.propTypes = {
+  turnOffModalHandler: PropTypes.func.isRequired,
+};
 
 export default Backdrop;
