@@ -7,8 +7,6 @@ import Modal from '../UI/Modal/Modal';
 import { turnOnModal, turnOffModal } from '../../store/actions/index';
 
 function App() {
-  /* POST */
-
   const dispatch = useDispatch();
   const [postData, setPostData] = useState([
     { title: 'Mountains', url: 'https://www.sunhome.ru/i/wallpapers/87/zolotoe-nebo.xxl.jpg', id: 234424 },
@@ -28,8 +26,6 @@ function App() {
       deletePost={deletePost}
     />
   ));
-
-  /* MODAL */
 
   const addPostHandler = (title, url) => {
     const id = Math.round(Math.random() * 1000000);

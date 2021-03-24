@@ -19,7 +19,6 @@ function Post({
           </div>
         ) : null}
         <img
-          onTouch={() => deletePost(id)}
           className={classes.postImg}
           src={url}
           alt={title}
