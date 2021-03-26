@@ -8,9 +8,9 @@ function Backdrop({ turnOffModalHandler }) {
       role="button"
       aria-label="Mute volume"
       tabIndex={0}
-      className={classes.Backdrop}
-      onClick={() => turnOffModalHandler()}
-      onKeyDown={() => turnOffModalHandler()}
+      className={classes.backdrop}
+      onClick={turnOffModalHandler}
+      onKeyDown={turnOffModalHandler}
     />
   );
 }

@@ -13,11 +13,11 @@ function Post({
         <button type="button" className={classes.postButtonDelete} onClick={() => deletePost(id)}>delete</button>
       </div>
       <div className={classes.deletePost} onTouchStart={() => setShowOverlay(true)}>
-        { showOverlay ? (
+        { showOverlay && (
           <div className={classes.deletePostOverlay} onTouchEnd={() => setShowOverlay(false)}>
             <p onTouchStart={() => deletePost(id)}>delete</p>
           </div>
-        ) : null}
+        )}
         <img
           className={classes.postImg}
           src={url}

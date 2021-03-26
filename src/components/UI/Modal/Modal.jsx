@@ -22,7 +22,7 @@ function Modal({ addPostHandler }) {
     && (
     <>
       <Backdrop turnOffModalHandler={turnOffModalHandler} />
-      <div className={classes.Modal}>
+      <div className={classes.modal}>
         <div className={classes.container}>
           <h1 className={classes.modalText}>New image</h1>
           <input
@@ -32,7 +32,7 @@ function Modal({ addPostHandler }) {
             placeholder="Title"
             maxLength="30"
             minLength="3"
-            onInput={(e) => setTitle((e.target.value).trimLeft())}
+            onChange={(e) => setTitle((e.target.value).trimLeft())}
           />
           <input
             className={classes.modalInput}
@@ -40,7 +40,7 @@ function Modal({ addPostHandler }) {
             type="text"
             minLength="10"
             placeholder="URL"
-            onInput={(e) => setUrl((e.target.value).trimLeft())}
+            onChange={(e) => setUrl((e.target.value).trimLeft())}
           />
           <div className={classes.buttonBlock}>
             <button

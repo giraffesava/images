@@ -17,16 +17,6 @@ function App() {
     setPostData(postData.filter((post) => post.id !== id));
   };
 
-  const posts = postData.map((item) => (
-    <Post
-      url={item.url}
-      key={item.id}
-      title={item.title}
-      id={item.id}
-      deletePost={deletePost}
-    />
-  ));
-
   const addPostHandler = (title, url) => {
     const id = Math.round(Math.random() * 1000000);
     setPostData([{ title, url, id }, ...postData]);
@@ -43,7 +33,15 @@ function App() {
       >
         NEW
       </button>
-      {posts}
+      {postData.map((item) => (
+        <Post
+          url={item.url}
+          key={item.id}
+          title={item.title}
+          id={item.id}
+          deletePost={deletePost}
+        />
+      ))}
       <Modal
         addPostHandler={addPostHandler}
       />
