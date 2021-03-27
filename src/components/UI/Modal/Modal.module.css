@@ -32,7 +32,7 @@
 
 .modalInput {
   margin-bottom: 1vmax;
-  max-width: 400px;
+  width:100%;
   font-size: 1.8vmax;
 }
 

@@ -2,7 +2,7 @@
 
 .container {
   max-width: 60%;
-  margin: 0 auto 30px;
+  margin: 0 auto 1em;
 }
 
 .post {
@@ -23,16 +23,16 @@
 .postName {
   font-size: 1.7em;
   word-wrap: break-word;
-  margin: 0.2em 0;
+  margin: 0.2em 0.2em;
 }
 
 /* POST IMG */
 
-.postImg {
-  max-width: 100%; 
+.postImg { 
   height: auto; 
   display: block;
   margin: 0 auto;
+  width: 100%
 }
 
 .deletePostOverlay p {
@@ -49,7 +49,7 @@
   }
   .post{
     width: 70%;
-    margin: 0 auto 4vmax;
+    margin: 0 auto 8px;
   }
   .deletePostOverlay {
     position: absolute;
@@ -63,6 +63,7 @@
     display:block;
     font-size: 1em;
     color: red;
+    margin: auto;
     padding-bottom: 5%;
   }
   .deletePost{
@@ -72,5 +73,6 @@
   }
   .container {
     max-width: 90%;
+    margin: auto;
   }
 }

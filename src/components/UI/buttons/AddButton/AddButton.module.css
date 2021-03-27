@@ -1,12 +1,12 @@
 .addButton {
-  margin: 2vmax 2vmax;
+  margin: 1em 0;
   background-color: white;
   color: #14c91a;
   border: 1.5px solid #14c91a;
-  padding: 1vmax 1.8vmax;
+  padding: 0.5em 1em;
   border-radius: 10px;
   cursor: pointer;
-  font-size: 1.3vmax;
+  font-size: 1.5em;
 }
 
 .addButton:active {
@@ -24,7 +24,7 @@
     background-color: #cccccc;
     color: #666666;
     cursor: not-allowed;
-    border: 1.5px solid #cccccc;
+    border: 1.5px solid #000000;
   }
 
 @media (max-width: 500px){

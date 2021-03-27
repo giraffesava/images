@@ -1,12 +1,12 @@
 .closeButton {
   color: #000000;
-  padding: 1vmax 1vmax;
+  padding: 0.5em 0.4em;
   border: 1.5px solid #000000;
   background-color: white;
   border: 1.5px solid #000000;
-  margin: 2vmax 2vmax;
+  margin: 1em 0em;
   cursor: pointer;
-  font-size: 1.3vmax;
+  font-size: 1.5em;
   border-radius: 10px;
 }
 
