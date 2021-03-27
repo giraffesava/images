@@ -15,12 +15,12 @@ function App() {
     { title: 'USA', url: 'https://data.whicdn.com/images/130405358/original.jpg', id: 125678 }]);
 
   const deletePost = (id) => {
-    setPostData(postData.filter((post) => post.id !== id));
+    setPostData((prevData) => prevData.filter((post) => post.id !== id));
   };
 
   const addPostHandler = (title, url) => {
     const id = Math.round(Math.random() * 1000000);
-    setPostData([{ title, url, id }, ...postData]);
+    setPostData((prevData) => [{ title, url, id }, ...prevData]);
     dispatch(turnOffModal());
   };
 

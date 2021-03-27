@@ -26,7 +26,7 @@ function Modal({ addPostHandler }) {
   };
 
   return (
-    !!modalIsOn
+    modalIsOn
     && (
     <>
       <Backdrop turnOffModalHandler={turnOffModalHandler} />
