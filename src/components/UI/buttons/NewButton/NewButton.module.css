@@ -1,0 +1,29 @@
+.addButton {
+  margin: 1em 1em;
+  background-color: white;
+  color: #14c91a;
+  border: 1.5px solid #14c91a;
+  padding: 0.7em 1.6em;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.addButton:active {
+  color: #ffffff;
+  border: 1.5px solid #0c790f;
+  background-color: rgb(174, 202, 175);
+}
+
+.addButton:hover {
+    transform: scale(1.2);
+  }
+
+@media (max-width: 500px){
+  .addButton, .addButton:hover {
+    width: 63%;
+    margin: 1em 0;
+    transform: scale(1);
+    font-size: 0.6em;
+  }
+}  

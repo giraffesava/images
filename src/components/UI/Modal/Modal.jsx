@@ -4,6 +4,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import classes from './Modal.module.css';
 import Backdrop from '../Backdrop/Backdrop';
 import { turnOffModal } from '../../../store/actions/index';
+import AddButton from '../buttons/AddButton/AddButton';
+import CloseButton from '../buttons/CloseButton/CloseButton';
 
 function Modal({ addPostHandler }) {
   const modalIsOn = useSelector((state) => state.modalReducer.modalIsOn);
@@ -13,6 +15,12 @@ function Modal({ addPostHandler }) {
 
   const turnOffModalHandler = () => {
     dispatch(turnOffModal());
+    setUrl('');
+    setTitle('');
+  };
+
+  const addPostOverallHandler = () => {
+    addPostHandler(title, url);
     setUrl('');
     setTitle('');
   };
@@ -43,21 +51,12 @@ function Modal({ addPostHandler }) {
             onChange={(e) => setUrl((e.target.value).trimLeft())}
           />
           <div className={classes.buttonBlock}>
-            <button
-              className={[classes.addButton, classes.moduleButtonClose].join(' ')}
-              type="button"
-              onClick={() => turnOffModalHandler()}
-            >
-              CLOSE
-            </button>
-            <button
-              disabled={!((url && title))}
-              className={classes.addButton}
-              type="button"
-              onClick={() => { addPostHandler(title, url); setUrl(''); setTitle(''); }}
-            >
-              ADD
-            </button>
+            <CloseButton turnOffModalHandler={turnOffModalHandler} />
+            <AddButton
+              url={url}
+              title={title}
+              addPostOverallHandler={addPostOverallHandler}
+            />
           </div>
         </div>
       </div>
