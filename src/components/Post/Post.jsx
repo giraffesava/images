@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import classes from './Post.module.css';
-import DeleteButton from '../UI/buttons/DeleteButton/DeleteButton';
+import Button from '../UI/Button/Button';
 
 function Post({
   url, title, id, deletePost,
@@ -12,7 +12,7 @@ function Post({
       <div className={classes.post}>
         <div className={classes.postHeader}>
           <h1 className={classes.postName}>{title}</h1>
-          <DeleteButton deletePost={deletePost} id={id} />
+          <Button variant="deleteButton" whatToDo={() => deletePost(id)} id={id}>delete</Button>
         </div>
         <div className={classes.deletePost} onTouchStart={() => setShowOverlay(true)}>
           { showOverlay && (

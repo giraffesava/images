@@ -4,8 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import classes from './Modal.module.css';
 import Backdrop from '../Backdrop/Backdrop';
 import { turnOffModal } from '../../../store/actions/index';
-import AddButton from '../buttons/AddButton/AddButton';
-import CloseButton from '../buttons/CloseButton/CloseButton';
+import Button from '../Button/Button';
 
 function Modal({ addPostHandler }) {
   const modalIsOn = useSelector((state) => state.modalReducer.modalIsOn);
@@ -51,12 +50,15 @@ function Modal({ addPostHandler }) {
             onChange={(e) => setUrl((e.target.value).trimLeft())}
           />
           <div className={classes.buttonBlock}>
-            <CloseButton turnOffModalHandler={turnOffModalHandler} />
-            <AddButton
+            <Button variant="closeButton" whatToDo={turnOffModalHandler}>CLOSE</Button>
+            <Button
+              variant="addButton"
               url={url}
               title={title}
-              addPostOverallHandler={addPostOverallHandler}
-            />
+              whatToDo={addPostOverallHandler}
+            >
+              ADD
+            </Button>
           </div>
         </div>
       </div>

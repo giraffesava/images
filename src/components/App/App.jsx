@@ -4,8 +4,8 @@ import classes from './App.module.css';
 import Header from '../Header/Header';
 import Post from '../Post/Post';
 import Modal from '../UI/Modal/Modal';
-import { turnOffModal } from '../../store/actions/index';
-import NewButton from '../UI/buttons/NewButton/NewButton';
+import { turnOffModal, turnOnModal } from '../../store/actions/index';
+import Button from '../UI/Button/Button';
 
 function App() {
   const dispatch = useDispatch();
@@ -24,10 +24,14 @@ function App() {
     dispatch(turnOffModal());
   };
 
+  const openModalHandler = () => {
+    dispatch(turnOnModal());
+  };
+
   return (
     <div className={classes.App}>
       <Header />
-      <NewButton />
+      <Button variant="newButton" whatToDo={openModalHandler}>NEW</Button>
       {postData.map((item) => (
         <Post
           url={item.url}
