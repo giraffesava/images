@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
+import ReactDOM from 'react-dom';
 import classes from './Modal.module.css';
 import Backdrop from '../Backdrop/Backdrop';
 import { turnOffModal } from '../../../store/actions/index';
@@ -24,7 +25,7 @@ function Modal({ addPostHandler }) {
     setTitle('');
   };
 
-  return (
+  return ReactDOM.createPortal(
     modalIsOn
     && (
     <>
@@ -63,7 +64,8 @@ function Modal({ addPostHandler }) {
         </div>
       </div>
     </>
-    )
+    ),
+    document.getElementById('portal'),
   );
 }
 
