@@ -39,7 +39,7 @@ function Post({
 Post.propTypes = {
   url: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
   deletePost: PropTypes.func.isRequired,
 };
 
