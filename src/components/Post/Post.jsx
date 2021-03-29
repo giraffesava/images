@@ -23,7 +23,6 @@ function Post({
               <p onTouchStart={deletePostHandler}>delete</p>
             </div>
           )}
-
           <img
             className={classes.postImg}
             src={url}
