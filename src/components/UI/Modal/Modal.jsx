@@ -38,15 +38,13 @@ function Modal({ addPostHandler }) {
             value={title}
             type="text"
             placeholder="Title"
-            maxLength="30"
-            minLength="3"
+            maxLength="25"
             onChange={(e) => setTitle((e.target.value).trimLeft())}
           />
           <input
             className={classes.modalInput}
             value={url}
             type="text"
-            minLength="10"
             placeholder="URL"
             onChange={(e) => setUrl((e.target.value).trimLeft())}
           />

@@ -14,9 +14,7 @@
   border-radius: 20px;
 }
 
-
 /*-----------------INSIDE OF MODAL---------------------*/
-
 
 .container {
   display: flex;
@@ -27,16 +25,15 @@
   font-size: 3em;
   text-align: center;
   width: 100%;
-  margin: 0 0 20px 0;
+  margin: 20px 0;
 }
-
 
 .modalInput {
-  margin-bottom: 2em;
+  margin-bottom: 1em;
   width:100%;
-  font-size: 1.6em;
+  font-size: 2em;
+  border: 1px solid black
 }
-
 
 .buttonBlock {
   display: flex;
@@ -51,6 +48,21 @@
   border: 1.5px solid #000000;
 }
 
+@media(max-width:750px){
+  .buttonBlock{
+    flex-direction: column;
+    align-items: center;
+  }
+  .modalInput {
+    margin: 0.7em 0;
+    max-width: 800px;
+    font-size: 1.5em;
+  }
+  .modalText {
+    font-size: 1.9em;
+    margin: 10px 0;
+  }
+}
 
 @media (max-width: 500px){
   .modal {
@@ -60,12 +72,8 @@
     border: none;
     box-shadow: none;
     left: 5%;
-    top: 10%;
+    top: 15%;
     box-sizing: border-box;
-  }
-  .buttonBlock{
-    flex-direction: column;
-    align-items: center;
   }
   .modalInput {
     margin-bottom: 1em;

@@ -60,11 +60,13 @@
   border: none;
   background-color: #fff;
   font-size: 1.5em;
-  margin: 0.2em 0.2em;
+  margin: 0 0.2em;
+  word-break:keep-all;
+  height: 100%
 }
 
 .deleteButton:hover {
-  transform: scale(1.2);
+  transform: scale(1.15);
   border: none;
 }
 
@@ -96,20 +98,30 @@
     transform: scale(1.2);
 }
 
+@media (max-width: 750px){
+  .addButton {
+    font-size: 1em;
+  }
+  .closeButton {
+    font-size: 1.2em;
+  }
+}
+
 @media (max-width: 500px){
   .addButton, .addButton:hover {
     width: 50%;
-    margin: 2vmax 0;
+    margin: 0.2em 0;
     transform: scale(1);
-    font-size: 5vmax;
+    font-size: 2em;
+    padding: 15px 38px;
     width: 100%;
     border-radius: 20px;
   }
   .closeButton, .closeButton:hover {
     width: 50%;
-    margin: 2vmax 0;
+    margin: 0.2em 0;
     transform: scale(1);
-    font-size: 5vmax;
+    font-size: 2em;
     width: 100%;
     border-radius: 20px;
   }
