@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './Button.css';
 
 function Button({
-  children, variant, whatToDo, url, title,
+  children, variant, onClick, url, title,
 }) {
   return (
     <div>
@@ -11,7 +11,7 @@ function Button({
         disabled={variant === 'addButton' && !(url && title)}
         type="button"
         className={variant}
-        onClick={whatToDo}
+        onClick={onClick}
       >
         {children}
       </button>
@@ -27,7 +27,7 @@ Button.defaultProps = {
 Button.propTypes = {
   children: PropTypes.string.isRequired,
   variant: PropTypes.oneOf(['addButton', 'closeButton', 'deleteButton', 'newButton']).isRequired,
-  whatToDo: PropTypes.func.isRequired,
+  onClick: PropTypes.func.isRequired,
   url: PropTypes.string,
   title: PropTypes.string,
 };

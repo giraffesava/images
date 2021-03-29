@@ -51,12 +51,12 @@ function Modal({ addPostHandler }) {
             onChange={(e) => setUrl((e.target.value).trimLeft())}
           />
           <div className={classes.buttonBlock}>
-            <Button variant="closeButton" whatToDo={turnOffModalHandler}>CLOSE</Button>
+            <Button variant="closeButton" onClick={turnOffModalHandler}>CLOSE</Button>
             <Button
               variant="addButton"
               url={url}
               title={title}
-              whatToDo={addPostOverallHandler}
+              onClick={addPostOverallHandler}
             >
               ADD
             </Button>

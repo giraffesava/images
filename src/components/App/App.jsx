@@ -22,7 +22,6 @@ function App() {
   const addPostHandler = (title, url) => {
     setPostData((prevData) => [{ title, url, id: uuidv4() }, ...prevData]);
     dispatch(turnOffModal());
-    console.log(postData);
   };
 
   const openModalHandler = () => {
@@ -32,7 +31,7 @@ function App() {
   return (
     <div className={classes.App}>
       <Header />
-      <Button variant="newButton" whatToDo={openModalHandler}>NEW</Button>
+      <Button variant="newButton" onClick={openModalHandler}>NEW</Button>
       {postData.map((item) => (
         <Post
           url={item.url}
