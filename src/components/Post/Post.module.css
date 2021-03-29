@@ -29,12 +29,19 @@
 }
 
 /* POST IMG */
+.imgWrapper {
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+}
 
 .postImg { 
   height: auto; 
   display: block;
   margin: 0 auto;
-  width: 100%
+  width: 100%;
+  position: relative;
+  z-index: 100;
 }
 
 .deletePostOverlay p {
@@ -57,9 +64,10 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgba(8, 6, 6, 0.6);
+    background-color: rgba(8, 5, 5, 0.6);
     display: flex;
     justify-content: center;
+    z-index: 200;
   }
   .deletePostOverlay p {
     display:block;
@@ -67,6 +75,8 @@
     color: red;
     margin: auto;
     padding-bottom: 5%;
+    z-index: 100;
+    z-index: 200;
   }
   .deletePost{
     position: relative;

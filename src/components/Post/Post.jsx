@@ -17,12 +17,13 @@ function Post({
           <h1 className={classes.postName}>{title}</h1>
           <Button variant="deleteButton" onClick={deletePostHandler}>delete</Button>
         </div>
-        <div className={classes.deletePost} onTouchStart={() => setShowOverlay(true)}>
+        <div className={classes.imgWrapper} onTouchStart={() => setShowOverlay(true)}>
           { showOverlay && (
             <div className={classes.deletePostOverlay} onTouchEnd={() => setShowOverlay(false)}>
               <p onTouchStart={deletePostHandler}>delete</p>
             </div>
           )}
+
           <img
             className={classes.postImg}
             src={url}
