@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import classes from './Post.module.css';
 import Button from '../UI/Button/Button';
@@ -7,17 +7,20 @@ function Post({
   url, title, id, deletePost,
 }) {
   const [showOverlay, setShowOverlay] = useState(false);
+  const deletePostHandler = useCallback(
+    () => { deletePost(id); }, [id, deletePost],
+  );
   return (
     <div className={classes.container}>
       <div className={classes.post}>
         <div className={classes.postHeader}>
           <h1 className={classes.postName}>{title}</h1>
-          <Button variant="deleteButton" whatToDo={() => deletePost(id)} id={id}>delete</Button>
+          <Button variant="deleteButton" onClick={deletePostHandler}>delete</Button>
         </div>
         <div className={classes.deletePost} onTouchStart={() => setShowOverlay(true)}>
           { showOverlay && (
             <div className={classes.deletePostOverlay} onTouchEnd={() => setShowOverlay(false)}>
-              <p onTouchStart={() => deletePost(id)}>delete</p>
+              <p onTouchStart={deletePostHandler}>delete</p>
             </div>
           )}
           <img
